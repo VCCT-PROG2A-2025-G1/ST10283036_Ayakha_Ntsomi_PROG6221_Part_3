@@ -39,6 +39,29 @@ namespace CyberSecurityBot
                 Console.Write(c);
                 Thread.Sleep(delay);
             }
+            Console.WriteLine();
+        }
+
+        public static void PrintDivider() 
+        {
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.WriteLine("------------------------------------------------");
+            Console.ResetColor();
+        }
+
+        public static void PrintPrompt(string message) 
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write(message);
+            Console.ResetColor();
+        }
+
+        public static void PrintBotResponse(string response) 
+        {
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.Write("CyberBot: ");
+            Console.ResetColor();
+            TypeEffect(response);
         }
     }
 }

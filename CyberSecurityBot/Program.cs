@@ -16,10 +16,12 @@ namespace CyberSecurityBot
             ConsoleUI.PrintAsciiArt();
             ConsoleUI.DisplayWelcome();
 
-            Console.Write("What's your name? ");
-            string? userName = Console.ReadLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("\nWhat's your name? ");
+            Console.ResetColor();
 
-            if (string.IsNullOrEmpty(userName)) 
+            string? userName = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(userName)) 
             {
                 userName = "Guest";
             }
@@ -31,7 +33,8 @@ namespace CyberSecurityBot
 
             while (true) 
             {
-                Console.Write("\nAsk me a question (type 'exit' to quit): ");
+                ConsoleUI.PrintDivider();
+                ConsoleUI.PrintPrompt("Ask me a question (type 'exit' to quit): ");
                 string? input = Console.ReadLine()?.Trim();
 
                 if (string.IsNullOrWhiteSpace(input)) 
@@ -42,12 +45,14 @@ namespace CyberSecurityBot
 
                 if (input.Equals("exit, StringComparison.OrdinalIgnoreCase")) 
                 {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
                     ConsoleUI.TypeEffect("Goodbye! Stay safe online!\n");
+                    Console.ResetColor();
                     break;
                 }
 
                 string response = bot.GetResponse(input);
-                ConsoleUI.TypeEffect(response + "\n");
+                ConsoleUI.PrintBotResponse(response);
             }
         }
 
