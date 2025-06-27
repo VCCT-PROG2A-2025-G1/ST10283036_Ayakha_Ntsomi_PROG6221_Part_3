@@ -46,7 +46,7 @@ This **C# Console Chatbot** helps users learn and practice basic cybersecurity a
 ```bash
 dotnet run
 
-## 📁 Project Structure
+## Project Structure
 
 ```plaintext
 /Chatbot
@@ -54,8 +54,7 @@ dotnet run
 ├── ascii.txt            # ASCII art for console branding
 ├── Program.cs           # Main chatbot logic
 ├── Bot.cs               # Chatbot responses and memory
-├── GitHub/workflows
-│   └── dotnet.yml       # GitHub Actions CI workflow
+├── GitHub/workflows     # GitHub Actions CI workflow
 └── README.md            # Project description
 ```
 
