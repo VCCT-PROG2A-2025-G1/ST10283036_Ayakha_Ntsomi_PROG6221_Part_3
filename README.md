@@ -1,47 +1,50 @@
-# 🛡️ Cybersecurity Awareness Chatbot (C# Console App)
+# Cybersecurity Awareness Chatbot (C# Console App)
 
-This **C# Console Chatbot** helps users learn and practice basic cybersecurity awareness. Designed to simulate a **friendly and intelligent assistant**, it delivers cybersecurity tips and insights in a conversational manner.
+This **C# Console Chatbot** helps users learn and practice basic cybersecurity awareness. Designed to simulate a **friendly and intelligent assistant**, it delivers cybersecurity tips and insights in a conversational manner while teaching key security concepts.
 
-## 🎯 Features
+## Key Features
 
-### 🔊 Voice Greeting *(Windows only)*
-- Plays a welcome audio (`greetings.wav`) when the app starts to greet the user.
+### Voice Greeting *(Windows only)*
+- Plays a welcome audio (`greetings.wav`) when the application starts.
 
-### 🎨 ASCII Logo
-- Loads and displays branding from an `ascii.txt` file to create a custom terminal aesthetic.
+### ASCII Logo
+- Loads and displays custom ASCII art from an `ascii.txt` file for a personalized interface.
 
-### 🧠 Smart Responses & Keyword Detection
-- Responds intelligently to cybersecurity-related questions using **keyword matching** (e.g., “phishing”, “passwords”, “2FA”).
-- Provides quick, factual advice to help users stay safe online.
+### Smart Responses & Keyword Detection
+- Provides quick advice to help users stay safe online.
+- Detects and responds to keywords such as:
+  - **phishing**
+  - **password**
+  - **scams**
+  - **privacy**
+  - **firewall**
 
-### 💬 Conversation Memory
-- Recalls the last discussed topic to follow up on user queries.
-- Remembers the user’s favorite topic (if mentioned) to personalize future interactions.
+### Conversation Simulation
+- Detects emotional cues such as, *"worried"*, *"confused"*, and responds empathetically.
+- **Memory**
+  -  Recalls the last discussed topic to follow up on user queries.
+  -  Rememeber's the users favourite topic mentioned.
 
-### 😊 Sentiment Awareness
-- Recognizes emotional cues like "worried" or "confused" and replies empathetically to offer reassurance or clarification.
-
-### ⌨️ Typing Animation
+### Typing Animation
 - Simulates a typing effect when the bot responds, creating a more human-like interaction.
 
-### ✅ Input Validation
+### Input Validation
 - Gracefully handles blank, null, or invalid user inputs with helpful prompts.
 
-### 🚀 GitHub Actions CI
+### GitHub Actions CI
 - Includes a GitHub Actions workflow to:
   - Validate builds using the .NET SDK.
   - Ensure project integrity during commits and pushes.
 
-## ▶️ How to Run the Bot
+## How to Run the Bot
 
 ### **Option 1: Visual Studio**
-1. Open the project `.sln` file in Visual Studio.
-2. Build and run the application (`F5` or click "Start").
+1. Open the solution in **Visual Studio**.
+2. Build and run the application (Press `F5` or click **Start**).
 
 ### **Option 2: .NET CLI**
 ```bash
 dotnet run
-```
 
 ## 📁 Project Structure
 
@@ -53,24 +56,16 @@ dotnet run
 ├── Bot.cs               # Chatbot responses and memory
 ├── GitHub/workflows
 │   └── dotnet.yml       # GitHub Actions CI workflow
-└── README.md            # Project description (you are here)
+└── README.md            # Project description
 ```
 
-## 🛠️ Technologies Used
-- C# (.NET 6 or later)
+## Technologies Used
+- C# (.NET )
 - Windows Forms Console I/O
 - GitHub Actions CI/CD
 - WAV file audio playback (System.Media)
-- Basic NLP via `string.Contains` and pattern matching
+- Basic NLP via `string.Contains` and pattern matching.
 
-## 💡 Future Enhancements (Ideas)
-- Implement a GUI version with Windows Forms or WPF.
-- Add scheduling for real reminders.
-- Integrate external cybersecurity news API.
-- Export conversation history or logs.
-
-## 🤝 Contribution
-Pull requests are welcome. For major changes, please open an issue first to discuss your ideas.
-
-## 📜 License
+## 
+## License
 This project is licensed under the MIT License.
