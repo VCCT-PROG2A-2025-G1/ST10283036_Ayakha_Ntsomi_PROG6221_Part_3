@@ -12,7 +12,8 @@ namespace CyberSecurityBot
             {
                 PlayGreetingAudio();
             }
-      
+            
+            Console.Clear();
             ConsoleUI.PrintAsciiArt();
             ConsoleUI.DisplayWelcome();
 
@@ -28,6 +29,7 @@ namespace CyberSecurityBot
             
             Console.WriteLine();
             ConsoleUI.TypeEffect($"Welcome, {userName}! I'm your Cyybersecurity Awareness Bot.\n");
+            ConsoleUI.TypeEffect("You can ask me about password safety, phishing, privacy, scams, etc.\n");
 
             CyberBot bot = new CyberBot(userName);
 
@@ -39,11 +41,13 @@ namespace CyberSecurityBot
 
                 if (string.IsNullOrWhiteSpace(input)) 
                 {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
                     ConsoleUI.TypeEffect("Please enter something!\n");
+                    Console.ResetColor();
                     continue;
                 }
 
-                if (input.Equals("exit, StringComparison.OrdinalIgnoreCase")) 
+                if (input.Equals("exit", StringComparison.OrdinalIgnoreCase)) 
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
                     ConsoleUI.TypeEffect("Goodbye! Stay safe online!\n");
